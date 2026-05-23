@@ -4,7 +4,8 @@ SVG_DIR="/Users/gob/Projects/WarpClip-design/assets/logo/svg"
 FONT_DIR="/Users/gob/Projects/WarpClip-design/assets/fonts"
 PNG_DIR="/Users/gob/Projects/WarpClip-design/assets/logo/png"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-FONT_B64=$(base64 -i "$FONT_DIR/Geist-Bold.woff2")
+GEIST_B64=$(base64 -i "$FONT_DIR/Geist-Bold.woff2")
+NEWS_B64=$(base64 -i "$FONT_DIR/Newsreader-Italic.ttf")
 TMPDIR=$(mktemp -d)
 
 render_svg() {
@@ -14,7 +15,8 @@ render_svg() {
   local height="$4"
   local svg_content
   svg_content=$(cat "$svg_file")
-  svg_content=$(echo "$svg_content" | sed "s|url('../fonts/Geist-Bold.woff2') format('woff2')|url(data:font/woff2;base64,${FONT_B64}) format('woff2')|g")
+  svg_content=${svg_content//"url('../../fonts/Geist-Bold.woff2') format('woff2')"/"url(data:font/woff2;base64,${GEIST_B64}) format('woff2')"}
+  svg_content=${svg_content//"url('../../fonts/Newsreader-Italic.ttf') format('truetype')"/"url(data:font/ttf;base64,${NEWS_B64}) format('truetype')"}
   local html_file="$TMPDIR/render.html"
   cat > "$html_file" <<HTML
 <!doctype html>
@@ -27,21 +29,38 @@ HTML
     --window-size=${width},${height} --screenshot="$out_png" "file://$html_file" 2>/dev/null
 }
 
-for variant in white black gradient; do
+# Wordmark (viewBox 600x140)
+for variant in black white sage; do
   for h in 64 128 256; do
-    w=$((h * 4))
+    w=$(( (h * 600) / 140 ))
     render_svg "$SVG_DIR/wordmark-${variant}.svg" "$PNG_DIR/wordmark-${variant}-${h}.png" "$w" "$h"
   done
 done
 
-for variant in color white black; do
+# Mark monogram transparent (100x100)
+for variant in black white sage; do
+  for s in 64 128 256 512; do
+    render_svg "$SVG_DIR/mark-${variant}.svg" "$PNG_DIR/mark-${variant}-${s}.png" "$s" "$s"
+  done
+done
+
+# Mark tile (100x100)
+for variant in black white; do
+  for s in 64 128 256 512 1024; do
+    render_svg "$SVG_DIR/mark-tile-${variant}.svg" "$PNG_DIR/mark-tile-${variant}-${s}.png" "$s" "$s"
+  done
+done
+
+# Horizontal lockup (viewBox 680x100)
+for variant in black white sage; do
   for h in 64 128 256; do
-    w=$(( (h * 56) / 10 ))
+    w=$(( (h * 680) / 100 ))
     render_svg "$SVG_DIR/lockup-horizontal-${variant}.svg" "$PNG_DIR/lockup-horizontal-${variant}-${h}.png" "$w" "$h"
   done
 done
 
-for variant in color white black; do
+# Stacked lockup (viewBox 360x240)
+for variant in black white sage; do
   for w in 256 512 1024; do
     h=$(( (w * 240) / 360 ))
     render_svg "$SVG_DIR/lockup-stacked-${variant}.svg" "$PNG_DIR/lockup-stacked-${variant}-${w}.png" "$w" "$h"
