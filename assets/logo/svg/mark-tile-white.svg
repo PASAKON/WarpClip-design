@@ -1,7 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="WarpClip mark on white tile">
-  <title>WarpClip mark, black on white tile</title>
-  <rect width="100" height="100" rx="22" ry="22" fill="#ffffff"/>
-  <path d="M18 26 L32 76 L50 44 L68 76 L82 26"
-        fill="none" stroke="#000000" stroke-width="13"
-        stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="WarpClip Wc tile">
+  <title>WarpClip tile, black monogram on white with hairline</title>
+  <defs>
+    <style><![CDATA[
+      @font-face {
+        font-family: 'Geist';
+        src: url('../../fonts/Geist-Bold.woff2') format('woff2');
+        font-weight: 700; font-style: normal; font-display: block;
+      }
+      @font-face {
+        font-family: 'Newsreader';
+        src: url('../../fonts/Newsreader-Italic.ttf') format('truetype');
+        font-weight: 500; font-style: italic; font-display: block;
+      }
+      .w { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+           font-weight: 700; font-size: 60px; letter-spacing: -0.05em; }
+      .c { font-family: 'Newsreader', 'Iowan Old Style', 'Charter', Georgia, serif;
+           font-weight: 500; font-style: italic; font-size: 66px; letter-spacing: -0.015em; }
+    ]]></style>
+  </defs>
+  <rect x="0.5" y="0.5" width="99" height="99" rx="22" ry="22" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1"/>
+  <text x="12" y="68" class="w" fill="#000000">W</text>
+  <text x="56" y="68" class="c" fill="#000000">c</text>
 </svg>

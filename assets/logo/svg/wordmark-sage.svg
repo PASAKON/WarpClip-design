@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-label="WarpClip wordmark">
-  <title>WarpClip wordmark, black</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-label="WarpClip wordmark with sage accent">
+  <title>WarpClip wordmark, sage accent on Clip</title>
   <defs>
     <style><![CDATA[
       @font-face {
@@ -19,5 +19,5 @@
     ]]></style>
   </defs>
   <text x="0" y="104" class="warp" fill="#000000">Warp</text>
-  <text x="252" y="104" class="clip" fill="#000000">Clip</text>
+  <text x="252" y="104" class="clip" fill="#6B8E6F">Clip</text>
 </svg>
