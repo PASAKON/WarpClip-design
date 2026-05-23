@@ -2,10 +2,10 @@
   "$schema": "https://design-tokens.org/schemas/v0.1/tokens.json",
   "_meta": {
     "name": "WarpClip Color Tokens",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "updated": "2026-05-23",
     "source": "WarpClip-Brand-Brief.md §4",
-    "note": "v2.0 = B&W primary + sage accent (CEO directive). v1.0 dark+gradient is deprecated, not exported."
+    "note": "v3.0 = B&W primary + electric lime highlighter (notepad treatment, CEO directive). v2.0 sage + v1.0 dark+gradient are deprecated, not exported."
   },
   "color": {
     "bg": {
@@ -61,18 +61,23 @@
       "$type": "color",
       "description": "Nav, footer, faq dividers"
     },
-    "accent": {
-      "$value": "#6B8E6F",
+    "lime": {
+      "$value": "#CCFF00",
       "$type": "color",
-      "oklch": "oklch(58% 0.04 145)",
-      "description": "Sage signature. Max 2 uses per surface. Default: italic 'Clip' + LINE CTA."
+      "oklch": "oklch(94% 0.27 125)",
+      "description": "Electric lime highlighter accent. Max 2 uses per surface. Default: marker sweep behind italic 'Clip' + LINE CTA bg. Never as text color on white bg (contrast fail)."
     },
-    "accent-soft": {
-      "$value": "#E8EFE9",
+    "lime-deep": {
+      "$value": "#A8D400",
       "$type": "color",
-      "oklch": "oklch(94% 0.015 145)",
-      "description": "Sage hover state, bg tint"
+      "oklch": "oklch(82% 0.26 125)",
+      "description": "Lime CTA hover/pressed state"
     }
+  },
+  "_legacy_v2_archived": {
+    "_note": "v2.0 sage tokens. DEPRECATED. Replaced by lime v3 per CEO directive 2026-05-23.",
+    "accent_sage": "#6B8E6F",
+    "accent_sage_soft": "#E8EFE9"
   },
   "_legacy_v1_archived": {
     "_note": "Pre-v2.0 dark+gradient tokens. DO NOT use in new work. Kept for git diff context only.",

@@ -30,7 +30,7 @@ HTML
 }
 
 # Wordmark (viewBox 600x140)
-for variant in black white sage; do
+for variant in black white lime; do
   for h in 64 128 256; do
     w=$(( (h * 600) / 140 ))
     render_svg "$SVG_DIR/wordmark-${variant}.svg" "$PNG_DIR/wordmark-${variant}-${h}.png" "$w" "$h"
@@ -38,7 +38,7 @@ for variant in black white sage; do
 done
 
 # Mark monogram transparent (100x100)
-for variant in black white sage; do
+for variant in black white lime; do
   for s in 64 128 256 512; do
     render_svg "$SVG_DIR/mark-${variant}.svg" "$PNG_DIR/mark-${variant}-${s}.png" "$s" "$s"
   done
@@ -52,7 +52,7 @@ for variant in black white; do
 done
 
 # Horizontal lockup (viewBox 680x100)
-for variant in black white sage; do
+for variant in black white lime; do
   for h in 64 128 256; do
     w=$(( (h * 680) / 100 ))
     render_svg "$SVG_DIR/lockup-horizontal-${variant}.svg" "$PNG_DIR/lockup-horizontal-${variant}-${h}.png" "$w" "$h"
@@ -60,7 +60,7 @@ for variant in black white sage; do
 done
 
 # Stacked lockup (viewBox 360x240)
-for variant in black white sage; do
+for variant in black white lime; do
   for w in 256 512 1024; do
     h=$(( (w * 240) / 360 ))
     render_svg "$SVG_DIR/lockup-stacked-${variant}.svg" "$PNG_DIR/lockup-stacked-${variant}-${w}.png" "$w" "$h"
