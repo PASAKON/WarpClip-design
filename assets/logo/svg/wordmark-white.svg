@@ -1,21 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="WarpClip wordmark">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-label="WarpClip wordmark">
   <title>WarpClip wordmark, white</title>
   <defs>
     <style><![CDATA[
       @font-face {
         font-family: 'Geist';
-        src: url('../fonts/Geist-Bold.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        font-display: block;
+        src: url('../../fonts/Geist-Bold.woff2') format('woff2');
+        font-weight: 700; font-style: normal; font-display: block;
       }
-      .wm {
-        font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
-        font-weight: 700;
-        font-size: 100px;
-        letter-spacing: -0.045em;
+      @font-face {
+        font-family: 'Newsreader';
+        src: url('../../fonts/Newsreader-Italic.ttf') format('truetype');
+        font-weight: 500; font-style: italic; font-display: block;
       }
+      .warp { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+              font-weight: 700; font-size: 110px; letter-spacing: -0.05em; }
+      .clip { font-family: 'Newsreader', 'Iowan Old Style', 'Charter', Georgia, serif;
+              font-weight: 500; font-style: italic; font-size: 118px; letter-spacing: -0.015em; }
     ]]></style>
   </defs>
-  <text x="0" y="88" class="wm" fill="#ffffff">WarpClip</text>
+  <text x="0" y="104" class="warp" fill="#FFFFFF">Warp</text>
+  <text x="252" y="104" class="clip" fill="#FFFFFF">Clip</text>
 </svg>

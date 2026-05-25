@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 100" role="img" aria-label="WarpClip horizontal lockup">
-  <title>WarpClip horizontal lockup, black tile + black wordmark</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="WarpClip stacked lockup with lime marker">
+  <title>WarpClip stacked lockup, black tile + Clip on lime marker</title>
   <defs>
     <style><![CDATA[
       @font-face {
@@ -14,15 +14,18 @@
       }
       .tile-w { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 48px; letter-spacing: -0.05em; }
       .tile-c { font-family: 'Newsreader', 'Iowan Old Style', 'Charter', Georgia, serif; font-weight: 500; font-style: italic; font-size: 53px; letter-spacing: -0.015em; }
-      .wm-w { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 78px; letter-spacing: -0.05em; }
-      .wm-c { font-family: 'Newsreader', 'Iowan Old Style', 'Charter', Georgia, serif; font-weight: 500; font-style: italic; font-size: 84px; letter-spacing: -0.015em; }
+      .wm-w { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -0.05em; }
+      .wm-c { font-family: 'Newsreader', 'Iowan Old Style', 'Charter', Georgia, serif; font-weight: 500; font-style: italic; font-size: 60px; letter-spacing: -0.015em; }
     ]]></style>
   </defs>
-  <g transform="translate(0,10)">
+  <g transform="translate(140,8)">
     <rect width="80" height="80" rx="17.6" ry="17.6" fill="#000000"/>
     <text x="10" y="55" class="tile-w" fill="#FFFFFF">W</text>
     <text x="44" y="55" class="tile-c" fill="#FFFFFF">c</text>
   </g>
-  <text x="104" y="75" class="wm-w" fill="#000000">Warp</text>
-  <text x="284" y="75" class="wm-c" fill="#000000">Clip</text>
+  <g transform="translate(-2,1) skewX(-3) rotate(-0.4 215 153)">
+    <path d="M184,132 L308,130 Q314,130 314,136 L315,176 Q315,182 310,182 L188,183 Q182,183 182,178 L182,138 Q182,132 184,132 Z" fill="#CCFF00"/>
+  </g>
+  <text x="50" y="172" class="wm-w" fill="#000000">Warp</text>
+  <text x="180" y="172" class="wm-c" fill="#000000">Clip</text>
 </svg>

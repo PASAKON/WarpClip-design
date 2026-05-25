@@ -1,0 +1,90 @@
+{
+  "$schema": "https://design-tokens.org/schemas/v0.1/tokens.json",
+  "_meta": {
+    "name": "WarpClip Color Tokens",
+    "version": "3.0.0",
+    "updated": "2026-05-23",
+    "source": "WarpClip-Brand-Brief.md §4",
+    "note": "v3.0 = B&W primary + electric lime highlighter (notepad treatment, CEO directive). v2.0 sage + v1.0 dark+gradient are deprecated, not exported."
+  },
+  "color": {
+    "bg": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "oklch": "oklch(100% 0 0)",
+      "description": "Page background, default surface"
+    },
+    "surface": {
+      "$value": "#F5F5F7",
+      "$type": "color",
+      "oklch": "oklch(97% 0 0)",
+      "description": "Cards, alt sections, ba-wrap"
+    },
+    "surface-deep": {
+      "$value": "#000000",
+      "$type": "color",
+      "oklch": "oklch(0% 0 0)",
+      "description": "Inverted blocks: guarantees, final CTA, tile-black"
+    },
+    "fg": {
+      "$value": "#1D1D1F",
+      "$type": "color",
+      "oklch": "oklch(20% 0 0)",
+      "description": "Body text"
+    },
+    "fg-strong": {
+      "$value": "#000000",
+      "$type": "color",
+      "oklch": "oklch(0% 0 0)",
+      "description": "Headlines, marks, primary CTA"
+    },
+    "fg-invert": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "oklch": "oklch(100% 0 0)",
+      "description": "Text on dark surfaces"
+    },
+    "muted": {
+      "$value": "#6E6E73",
+      "$type": "color",
+      "oklch": "oklch(54% 0 0)",
+      "description": "Secondary text, metadata, eyebrow"
+    },
+    "border": {
+      "$value": "#D2D2D7",
+      "$type": "color",
+      "oklch": "oklch(86% 0 0)",
+      "description": "Card borders, tile-white hairline, tier dividers"
+    },
+    "border-subtle": {
+      "$value": "rgba(0,0,0,0.08)",
+      "$type": "color",
+      "description": "Nav, footer, faq dividers"
+    },
+    "lime": {
+      "$value": "#CCFF00",
+      "$type": "color",
+      "oklch": "oklch(94% 0.27 125)",
+      "description": "Electric lime highlighter accent. Max 2 uses per surface. Default: marker sweep behind italic 'Clip' + LINE CTA bg. Never as text color on white bg (contrast fail)."
+    },
+    "lime-deep": {
+      "$value": "#A8D400",
+      "$type": "color",
+      "oklch": "oklch(82% 0.26 125)",
+      "description": "Lime CTA hover/pressed state"
+    }
+  },
+  "_legacy_v2_archived": {
+    "_note": "v2.0 sage tokens. DEPRECATED. Replaced by lime v3 per CEO directive 2026-05-23.",
+    "accent_sage": "#6B8E6F",
+    "accent_sage_soft": "#E8EFE9"
+  },
+  "_legacy_v1_archived": {
+    "_note": "Pre-v2.0 dark+gradient tokens. DO NOT use in new work. Kept for git diff context only.",
+    "bg": "#09090b (zinc-950)",
+    "accent_indigo": "#6366f1",
+    "accent_violet": "#8b5cf6",
+    "accent_fuchsia": "#d946ef",
+    "cta_line": "#10b981 (emerald)"
+  }
+}

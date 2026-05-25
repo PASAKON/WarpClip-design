@@ -1,4 +1,6 @@
-# WarpClip Logo
+# WarpClip Logo (v3.0)
+
+> **v3.0 (CEO directive, 2026-05-23):** B&W primary + electric lime `#CCFF00` highlighter (notepad treatment). Wordmark-led system with mixed type: Geist Bold "Warp" + Newsreader Italic 500 "Clip" on lime marker sweep. Mark = "Wc" monogram. Pivot from v2.0 sage `#6B8E6F`.
 
 Source files + raster exports for the WarpClip brand. Closes design Issue #1.
 
@@ -7,109 +9,101 @@ Source files + raster exports for the WarpClip brand. Closes design Issue #1.
 ```
 assets/logo/
 ├── svg/
-│   ├── mark-color.svg              ← W on gradient tile (primary app icon)
-│   ├── mark-white.svg              ← W stroke only, white, transparent bg
-│   ├── mark-black.svg              ← W stroke only, black, transparent bg
-│   ├── mark-tile-white.svg         ← W black on white rounded tile
-│   ├── mark-tile-black.svg         ← W white on black rounded tile
-│   ├── wordmark-white.svg          ← "WarpClip" Geist Bold, white
-│   ├── wordmark-black.svg          ← "WarpClip" Geist Bold, black
-│   ├── wordmark-gradient.svg       ← "WarpClip" Geist Bold, indigo→fuchsia
-│   ├── lockup-horizontal-color.svg ← mark + wordmark (header use, dark text)
-│   ├── lockup-horizontal-white.svg
+│   ├── wordmark-black.svg        (Warp sans/black + Clip italic-serif/black)
+│   ├── wordmark-white.svg        (Warp sans/white + Clip italic-serif/white)
+│   ├── wordmark-lime.svg         (Warp+Clip black on LIME marker sweep)
+│   ├── mark-black.svg            ("Wc" monogram, black on transparent)
+│   ├── mark-white.svg            ("Wc" monogram, white on transparent)
+│   ├── mark-lime.svg             ("Wc" black on LIME marker sweep)
+│   ├── mark-tile-black.svg       ("Wc" white on black rounded tile)
+│   ├── mark-tile-white.svg       ("Wc" black on white tile, hairline border)
 │   ├── lockup-horizontal-black.svg
-│   ├── lockup-stacked-color.svg    ← mark above wordmark (square format)
+│   ├── lockup-horizontal-white.svg
+│   ├── lockup-horizontal-lime.svg (black tile + Warp+Clip black on LIME sweep)
+│   ├── lockup-stacked-black.svg
 │   ├── lockup-stacked-white.svg
-│   └── lockup-stacked-black.svg
+│   └── lockup-stacked-lime.svg    (black tile + Warp+Clip black on LIME sweep)
 └── png/
-    ├── mark-{color,white,black,tile-white,tile-black}-{24,32,48,64,128,256,512}.png
-    ├── wordmark-{white,black,gradient}-{64,128,256}.png    (height in px)
-    ├── lockup-horizontal-{color,white,black}-{64,128,256}.png
-    └── lockup-stacked-{color,white,black}-{256,512,1024}.png  (width in px)
+    ├── wordmark-{black,white,lime}-{64,128,256}.png        (height in px)
+    ├── mark-{black,white,lime}-{64,128,256,512}.png        (square)
+    ├── mark-tile-{black,white}-{64,128,256,512,1024}.png   (square)
+    ├── lockup-horizontal-{black,white,lime}-{64,128,256}.png
+    └── lockup-stacked-{black,white,lime}-{256,512,1024}.png (width in px)
 ```
 
-Fonts vendored at `assets/fonts/Geist-{Bold,SemiBold,Medium,Regular}.woff2` (SIL OFL).
+Fonts vendored at `assets/fonts/`:
+- `Geist-{Bold,SemiBold,Medium,Regular}.woff2` (SIL OFL)
+- `Newsreader-Italic.ttf` (OFL, Google Fonts, weight 500 italic)
 
 ## Design notes
 
-**Mark.** Geometric W in white stroke on indigo→violet→soft-violet diagonal gradient.
-Stroke width 13 on a 100-unit viewBox, round line caps and joins. Tile radius 22
-(matches Apple icon corner ratio at 22%). The W path uses asymmetric valley
-floors at x=32, x=68 and a center peak at (50, 44) for visual weight balance,
-sitting slightly below the optical center of the tile.
+**Wordmark.** "Warp" set in Geist Bold at -5% tracking. "Clip" set in Newsreader Italic 500 at -1.5% tracking, slightly larger to compensate for italic visual weight. Baseline aligned. Mixed-typeface is the signature; do not flatten to single family.
 
-**Wordmark.** Geist Bold at -4.5% tracking. Single weight, no italic, no mixed
-families per Brand-Brief §5.
+**Notepad marker sweep (v3 signature).** Lime `#CCFF00` rectangle path placed behind "Clip" text with `skewX(-3deg) rotate(-0.4deg)` and irregular border radii (top-left 8, top-right 4, bottom-right 12, bottom-left 6). Text on top stays solid black. Simulates highlighter marker on a notepad. Use this treatment only on the "Clip" italic.
 
-**Horizontal lockup.** Mark scaled to 80% of wordmark cap-square. 24px gap between
-mark right edge and first wordmark glyph. Top baseline of W mark aligns with
-wordmark cap-height.
+**Mark.** "Wc" monogram: W in Geist Bold (sans), c in Newsreader Italic 500 (serif). Same mixed-type DNA as wordmark, compressed to icon scale. Tile radius 22 (Apple icon corner ratio at 22%). Lime variant places marker sweep behind the "c" glyph.
 
-**Stacked lockup.** Mark centered on canvas at 100px square. Wordmark centered
-below at 56px font-size, 24px gap from mark bottom edge.
+**Horizontal lockup.** 80x80 tile + 24px gap + wordmark. Tile contains Wc monogram (no padding); wordmark sits at 78px font-size to align with tile cap-height optically. Lime variant: tile stays mono (black + white Wc), marker sweep appears only on "Clip" portion of wordmark.
+
+**Stacked lockup.** Tile centered top, wordmark centered below, 56px font-size. Used for square formats (avatars, business cards, press kit cover).
 
 ## Color variants
 
-| Variant     | Use case                                | Files                |
-|-------------|-----------------------------------------|----------------------|
-| `color`     | Default. Dark wordmark + gradient mark  | webapp header, dark text on light landing pages |
-| `gradient`  | Wordmark in gradient (no mark)          | hero headline accent, OG image |
-| `white`     | White on dark surfaces                  | dark hero, footer on `bg-zinc-950` |
-| `black`     | Black on light surfaces                 | press kit, B&W collateral, print |
-| `tile-*`    | Standalone tile for favicon/avatar      | favicon, social profile pic |
+| Variant   | When to use                                                          | Files                       |
+|-----------|----------------------------------------------------------------------|-----------------------------|
+| `black`   | On light backgrounds (default landing, white cards)                  | webapp header, body collateral |
+| `white`   | On dark surfaces (final CTA block, dark hero overlays, footer dark)  | dark inverted sections      |
+| `lime`    | Signature with marker sweep behind Clip. Use **once** per surface    | hero wordmark, brand showcase |
+| `tile-black` | Square favicon, social avatar, watermark on light photo           | favicon, IG, business card  |
+| `tile-white` | Avatar on dark surface (rare)                                     | dark IG bio, dark watermark |
+
+**Accent rule (90/10).** Lime `#CCFF00` appears at most **2 times per surface** total (per Brand-Brief §4). Default: (1) marker sweep behind italic Clip + headline `<em>`, (2) LINE CTA bg. **Never use lime as text color on white bg** (contrast fail). Always marker sweep + black text.
 
 ## Clear space and minimum size
 
-**Clear space.** Maintain a clear zone equal to the cap-height of the W mark
-(roughly 26% of the mark's bounding square) on all four sides. Nothing, not
-even a hairline rule, sits inside that zone.
+**Clear space.** Equal to the cap-height of the W glyph (~33% of the mark tile) on all four sides. Nothing, not even a hairline rule, inside that zone.
 
 **Minimum sizes.**
 
 | Asset              | Web (digital) | Print  |
 |--------------------|---------------|--------|
-| Mark (standalone)  | 16px          | 8mm    |
-| Horizontal lockup  | 96px wide     | 24mm   |
-| Stacked lockup     | 64px wide     | 16mm   |
-| Wordmark (no mark) | 64px wide     | 18mm   |
+| Mark tile          | 24px          | 8mm    |
+| Horizontal lockup  | 120px wide    | 28mm   |
+| Stacked lockup     | 80px wide     | 18mm   |
+| Wordmark (no mark) | 96px wide     | 22mm   |
 
-The lockups are tested for legibility at 24px, 32px, 64px header heights per
-Issue #1 acceptance criteria.
+The wordmark at 96px is legible across both Geist Bold + Newsreader Italic. Below that, switch to mark-only (tile).
 
 ## Do
 
-- Use `mark-color.svg` for app icon, favicon, social avatar
-- Use `lockup-horizontal-color.svg` in webapp `<Header>` and email signature
-- Use `lockup-stacked-color.svg` in square formats (Instagram avatar, business
-  card front, press kit cover)
-- Use `wordmark-gradient.svg` for one hero headline accent per page, max one
-- Place white variants on `bg-zinc-950` and darker
-- Place black variants on `bg-zinc-100` and lighter
+- Use `lockup-horizontal-black.svg` in webapp `<Header>` and email signature
+- Use `lockup-horizontal-lime.svg` once per surface for hero/showcase moments
+- Use `mark-tile-black.svg` for favicon, social avatar, video watermark corner
+- Use `wordmark-lime.svg` for one hero headline lockup per page
+- Place white variants only on solid dark surfaces (>= #1D1D1F equivalent)
+- Place black variants on white or near-white only (>= #F5F5F7)
 
 ## Don't
 
-- Don't recolor the gradient. Use `gradient` variant as is or fall back to white/black
-- Don't stretch, skew, rotate, or apply drop shadow
-- Don't place the mark on a busy photo without a 60%+ overlay
-- Don't use `wordmark-gradient.svg` more than once per surface
-- Don't pair the lockup with a competing logo without a divider rule
+- Don't recolor lime. Use the variant as is or fall back to black/white.
+- Don't use lime as text color (text on marker sweep stays black).
+- Don't flatten the mixed type. "Warp" must be sans, "Clip" must be italic serif.
+- Don't stretch, skew (beyond the prescribed sweep skew), rotate, or apply drop shadow.
+- Don't add a gradient (deprecated v1.0 signature).
+- Don't use lime more than 2 times per surface (marker sweep + LINE CTA = the budget).
+- Don't pair the lockup with a competing logo without a vertical divider rule (1px border).
+- Don't use legacy v1.0 W-stroke mark or v2.0 sage anywhere. Both fully replaced.
 
 ## Format guide
 
-- **SVG**: source of truth. Embeds `@font-face` referencing
-  `../fonts/Geist-Bold.woff2` (vendored in this repo). Renders correctly in
-  any modern browser. For Illustrator/Figma import, convert text to outlines
-  in app or use the PNG export.
-- **PNG**: pre rendered via Chrome headless with Geist Bold embedded as
-  base64 data URI. Use for chat platforms, slide decks, anywhere SVG isn't
-  supported.
+- **SVG**: source of truth. Embeds `@font-face` referencing `../../fonts/Geist-Bold.woff2` and `../../fonts/Newsreader-Italic.ttf` (both vendored). Renders in any modern browser. For Illustrator/Figma import, convert text to outlines in app or use the PNG export.
+- **PNG**: pre-rendered via Chrome headless with both fonts embedded as base64 data URI. Use for chat, slide decks, anywhere SVG isn't supported.
 
-To re render PNGs after editing an SVG, run `tools/render-png.sh` (script in
-`tools/` of this repo).
+To re-render PNGs after editing an SVG, run `tools/render-png.sh` from the repo root.
 
 ## Related
 
 - Issue: [PASAKON/WarpClip-design#1](https://github.com/PASAKON/WarpClip-design/issues/1)
 - Brand brief: [`/WarpClip-Brand-Brief.md`](../../WarpClip-Brand-Brief.md)
-- Webapp integration PR: opened against `PASAKON/WarpClip-webapp` (replaces
-  inline `W` in `src/components/Header.tsx`)
+- Tokens: [`/tokens/colors.json`](../../tokens/colors.json)
+- Webapp integration PR: opened against `PASAKON/WarpClip-webapp` (replaces inline `W` in `src/components/Header.tsx`)
