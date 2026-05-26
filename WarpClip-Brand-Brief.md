@@ -1,6 +1,25 @@
 # WarpClip — Brand Brief
 
-> Source of truth for visual + tonal identity. Update นี้ → update [webapp `tokens/`](../webapp/) ถ้ามี implication.
+> ⚠️ **STALE — v1.0 reference only.** This document represents the pre-pivot
+> brand (indigo/violet/fuchsia tri-color + emerald CTA + dark base). The
+> shipped visual identity uses **dark zinc-950 + neon lime `#CCFF00`** as
+> single accent.
+>
+> **DO NOT brief any asset from § 4 (Color Palette), § 5 typography font
+> mix, or § 8 (Imagery gradient overlay) of this file.**
+>
+> **Canonical source:** [`WarpClip-wikis/10-Architecture/Brand-Truth.md`](https://github.com/PASAKON/WarpClip-wikis/blob/main/10-Architecture/Brand-Truth.md)
+>
+> Sections still accurate (cross-reference Brand-Truth.md):
+> - § 1 (Positioning) — one-liner stays
+> - § 2 (Brand Architecture) — House of Brands intact
+> - § 3 (Tone & Voice) — voice rules stay
+> - § 9 (Voice Examples)
+> - § 10 (Don't Do) — most apply (note: "Light mode" Don't is reaffirmed)
+
+---
+
+> Original source of truth (PRE-PIVOT) for visual + tonal identity. Update นี้ → update [webapp `tokens/`](../webapp/) ถ้ามี implication.
 
 > **v3.0 (CEO directive, 2026-05-23):** Theme pivot จาก sage v2.0 ไป **B&W premium + electric lime highlighter (notepad treatment)**. เหตุผล: differentiation ที่กล้ากว่า, "highlighter marker behind text" เป็น metaphor ตรงกับ short-form editing (เน้นจุดที่สำคัญ), จดจำง่ายกว่า sage neutral, ยังคง premium 90/10 B&W-to-lime ratio.
 
